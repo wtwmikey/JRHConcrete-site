@@ -351,13 +351,9 @@ const OurWorkAlbumModal = {
         this.updateThumbnails();
         this.updateCounter();
         
-        // Hide/show thumbnails based on mobile
+        // Always show thumbnails (including on mobile)
         if (this.thumbnails) {
-            if (this.isMobile) {
-                this.thumbnails.classList.add('mobile-hidden');
-            } else {
-                this.thumbnails.classList.remove('mobile-hidden');
-            }
+            this.thumbnails.classList.remove('mobile-hidden');
         }
     },
 

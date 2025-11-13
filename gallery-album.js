@@ -42,11 +42,11 @@ const photoAlbums = {
     'sidewalk-1': {
         title: 'Professional Sidewalk Installation',
         photos: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688969-a5fcd7366612?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/92cpb46p',
+            'https://tinyurl.com/yvnnukfx',
+            'https://tinyurl.com/4rmntze3',
+            'https://tinyurl.com/mtjrmsf2',
+            'https://tinyurl.com/2f4nd7fb'
         ]
     },
     'commercial-1': {
@@ -468,13 +468,9 @@ const AlbumModal = {
         this.updateThumbnails();
         this.updateCounter();
         
-        // Hide/show thumbnails based on mobile
+        // Always show thumbnails (including on mobile)
         if (this.thumbnails) {
-            if (this.isMobile) {
-                this.thumbnails.classList.add('mobile-hidden');
-            } else {
-                this.thumbnails.classList.remove('mobile-hidden');
-            }
+            this.thumbnails.classList.remove('mobile-hidden');
         }
     },
 
