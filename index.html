@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="JRH Concrete & Construction LLC - Professional concrete services in Centralia, MO. Driveways, foundations, pathways, pool decks, and commercial concrete. Free estimates!">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>JRH Concrete & Construction LLC - Professional Concrete Services in Centralia, MO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="Images/Logo.svg">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-container">
+                <a href="#home" class="nav-logo">
+                    <img src="Images/logo.png" alt="JRH Concrete & Construction Logo" class="logo-img">
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span class="menu-icon">
+                        <span class="menu-icon-line"></span>
+                        <span class="menu-icon-line"></span>
+                        <span class="menu-icon-line"></span>
+                    </span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu" role="menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#quote" class="nav-link nav-link-cta">GET QUOTE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="Images/logo.png" alt="JRH Concrete & Construction Logo" class="hero-logo">
+            <p class="hero-subtitle">Ready for a new concrete driveway, foundation, or pathway? <br>Here at JRH Concrete & Construction, we're here to cement your dreams into reality.</p>
+            <div class="hero-buttons">
+                <a href="#quote" class="btn btn-primary">
+                    <span class="btn-text-desktop">GET FREE ESTIMATE</span>
+                    <span class="btn-text-mobile">GET QUOTE!</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Statistics/Trust Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number">Trusted for Over 5 Years</div>
+                        <h3>96%</h3>
+                        <p>of our projects stay within budget, ensuring transparent pricing and no surprises.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-number">Timely Delivery</div>
+                        <h3>98% </h3>
+                        <p>of our builds were completed on or before the scheduled completion date.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-indicators">
+                <div class="trust-badge">
+                    <span class="emoji-icon">✅</span>
+                    <span>Licensed & Insured</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="emoji-icon">🏆</span>
+                    <span>25+ Years of Experience</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="emoji-icon">🤝</span>
+                    <span>Free Estimates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Construction Section -->
+    <section class="expert-section">
+        <div class="container">
+            <div class="expert-content">
+                <div class="expert-text">
+                    <h2>Expert Construction.</h2>
+                    <p>With over two decades of hands-on experience, we've built a reputation for reliable work, fair pricing, and strong client relationships. Whether it's a home repair or a large-scale commercial project, our team is dedicated to delivering results that exceed expectations.</p>
+                    <a href="#about" class="btn btn-primary">LEARN MORE</a>
+                </div>
+                <div class="expert-images">
+                    <div class="expert-image">
+                        <img src="Images/expertconstruction.png" alt="Expert Construction">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Our Work</h2>
+            <p class="gallery-subtitle">Let our work speak for itself. Here's a handful of our projects!</p>
+            <div class="gallery-container">
+                <div class="gallery-grid">
+                <a href="gallery.html" class="gallery-item" data-album="home-driveway-1">
+                    <img src="https://tinyurl.com/42dap9td" alt="Concrete Driveway Project">
+                    <div class="gallery-overlay">
+                        <h3>Residential Driveways</h3>
+                    </div>
+                </a>
+                <a href="gallery.html" class="gallery-item" data-album="home-foundation-1">
+                    <img src="https://tinyurl.com/29ff568a" alt="Foundation Work">
+                    <div class="gallery-overlay">
+                        <h3>Housing Foundations</h3>
+                    </div>
+                </a>
+                <a href="gallery.html" class="gallery-item" data-album="home-pooldeck-1">
+                    <img src="https://tinyurl.com/34bsmez6" alt="Pool Deck Construction">
+                    <div class="gallery-overlay">
+                        <h3>Pool Deck Constructions</h3>
+                    </div>
+                </a>
+                <a href="gallery.html" class="gallery-item" data-album="home-walkway-1">
+                    <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/565693346_1112042871088048_9004295495231802155_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=oO4fuXiIkr0Q7kNvwHZpg6d&_nc_oc=Adn5MXxU1BxDLWx_2thDQncyEfOErqXUlsEHG3GjNWe5_9rLDqr1QIudkJYSOrpfvFeZHxeVfPnLoKrqlTcZd27e&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3bpF1QGWuGZuUijQGLnE5g&oh=00_Afir5VR-EZApvGeS0FccVVQYwueF22YGUZQqpGgoaM0Abw&oe=69120774" alt="Sidewalk Installation">
+                    <div class="gallery-overlay">
+                        <h3>Residential/Commercial Walkways</h3>
+                    </div>
+                </a>
+                <a href="gallery.html" class="gallery-item" data-album="home-patio-1">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" alt="Commercial Concrete">
+                    <div class="gallery-overlay">
+                        <h3>Patio Constructions</h3>
+                    </div>
+                </a>
+                <a href="gallery.html" class="gallery-item" data-album="home-repair-1">
+                    <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?w=600&h=400&fit=crop" alt="Concrete Repair">
+                    <div class="gallery-overlay">
+                        <h3>Restorations</h3>
+                    </div>
+                </a>
+                </div>
+                <div class="gallery-dots" aria-label="Gallery navigation dots"></div>
+            </div>
+            <div class="gallery-cta">
+                <a href="gallery.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>Reviews</h2>
+            <p class="testimonials-subtitle">Read what our satisfied clients have to say</p>
+            <div class="testimonials-wrapper">
+                <button class="testimonials-arrow testimonials-arrow-left" id="testimonialsArrowLeft" aria-label="Previous Testimonial">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="testimonials-container">
+                    <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Josh at JRH was such a big help in the remodel of my bedroom! Very knowledgeable and helpful! 5 star, will be using this service again!."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Kaelub Galloway</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"John, recently completed a concrete floor in our shed. He was always on time and did what he said he would do.. he was extremely conscious and did a great job.. i would highly recommend him to anyone."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Nick Paul</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We have used JRH Concrete for our personal jobs and job repairs for us and they have done wonderful work.  Everyone has been pleased.  Would recommend them always"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Nelson's Tree Service, LLC</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Did a great job helping pour a sloped curbless shower base."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Hank Mason</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Will definitely use their services for future home projects. Polite, professional, thorough, great communication."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-info">
+                            <h4>Sarah Brewer</h4>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <button class="testimonials-arrow testimonials-arrow-right" id="testimonialsArrowRight" aria-label="Next Testimonial">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+            <div class="testimonials-dots" aria-label="Testimonials navigation dots"></div>
+        </div>
+    </section>
+
+    <!-- Quote Request Form Section -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <h2>Get Your Free Estimate</h2>
+            <p>Tell us your ideas and lets turn them into a reality.</p>
+            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+            
+            <form class="quote-form" id="quoteForm" action="javascript:void(0);" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Property Address *</label>
+                    <input type="text" id="address" name="address" placeholder="123 Main Street, Centralia, MO 65240" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="driveways">Driveways</option>
+                            <option value="foundations">Foundations</option>
+                            <option value="pathways">Pathways & Sidewalks</option>
+                            <option value="patios">Pool Decks & Outdoor Living</option>
+                            <option value="commercial">Commercial Concrete</option>
+                            <option value="repair">Concrete Repair & Resurfacing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency">
+                            <option value="not-urgent">Not Urgent</option>
+                            <option value="soon">Within 1-2 weeks</option>
+                            <option value="urgent">Within 1 week</option>
+                            <option value="emergency">Emergency</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Project Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Please describe your concrete project, dimensions, any specific issues, or questions you have..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredContact">Preferred Contact Method:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferredContact[]" value="phone" checked>
+                            <span>Phone</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferredContact[]" value="email">
+                            <span>Email</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferredContact[]" value="text">
+                            <span>Text Message</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-large">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact and FAQ Section -->
+    <section class="contact-faq-wrapper">
+        <div class="container">
+
+            <!-- FAQ Section -->
+            <section id="faq" class="faq-section">
+            <h2>FAQs</h2>
+            <p class="faq-subtitle">Get answers to common questions about our concrete construction services</p>
+            
+            <div class="faq-wrapper">
+                <button class="faq-arrow faq-arrow-left" id="faqArrowLeft" aria-label="Previous FAQ">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">What areas do you serve?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our service area includes nearby communities in Boone County and Central Missouri. Contact us to confirm if we serve your location.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">How long does a concrete driveway installation take?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most concrete driveway installations take 2-3 days from start to finish. This includes site preparation, form work, pouring, and finishing. Weather conditions may affect the timeline. We'll provide a detailed timeline during your free estimate.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Do you offer free estimates?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer free, no-obligation estimates for all concrete projects. Our team will visit your property, assess the project, and provide you with a detailed quote. There's never any pressure—just honest, transparent pricing.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Are you licensed and insured?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, JRH Concrete & Construction LLC is fully licensed and insured. We carry both general liability insurance and workers' compensation to protect you and our team. We can provide proof of insurance upon request.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">What types of concrete finishes do you offer?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a variety of concrete finishes including smooth, broom finish, stamped concrete, colored concrete, and decorative options. During your consultation, we'll help you choose the best finish for your project and budget.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">How long does concrete need to cure?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While concrete gains strength over time, it's typically safe for light foot traffic after 24-48 hours and vehicle traffic after 7 days. Full curing takes about 28 days. We'll provide specific recommendations based on your project and weather conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">Do you work with property managers and commercial clients?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we regularly work with property managers, business owners, and commercial clients. We understand the unique needs of commercial projects including scheduling, coordination, and maintaining business operations during work.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">When is the best time of year for concrete work?</h3>
+                        <span class="faq-toggle material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Concrete work can be done year-round, but spring through fall typically offers the best conditions. We work in various weather conditions and take appropriate measures to ensure quality results regardless of season.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="faq-arrow faq-arrow-right" id="faqArrowRight" aria-label="Next FAQ">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+            <div class="faq-dots" aria-label="FAQ navigation dots"></div>
+        </div>
+    </section>
+
+    
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="about-overlay"></div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-header">
+                    <h2>About US</h2>
+                </div>
+                <div class="about-image">
+                    <img src="Images/logo.png" alt="JRH Concrete & Construction Logo">
+                </div>
+                <div class="about-text">
+                    <p>With over two generations of experience, knowledge, and education, we are dedicated to providing the best quality concrete services available.</p>
+                    <p>Here at JRH Concrete & Construction, we specialize in all concrete applications and related construction services. From decorative to structural, no job is too small or neglected.</p>
+                    <p>We do service in Centralia and Boone County, Missouri! Allow us to work with you on your next project!</p>
+                    <a href="gallery.html" class="btn btn-primary">Check out our work!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <div class="footer-logo">
+                        <span>JRH Concrete & Construction LLC</span>
+                    </div>
+                    <p>Professional concrete construction with reliable service and quality craftsmanship. Cementing your dreams into reality.</p>
+                </div>
+                <div class="footer-section footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#quote">Get Quote</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><span class="emoji-icon">✉️</span> Email: <a href="mailto:jrhccllc@gmail.com">jrhccllc@gmail.com</a></p>
+                    <p><span class="emoji-icon">📞</span> Phone: <a href="tel:+15738814201">(573) 881-4201</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JRH Concrete & Construction LLC • Centralia, Missouri</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Box -->
+    <div class="floating-chat">
+        <div class="chat-toggle" id="chatToggle">
+            <span class="material-icons">chat</span>
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h4>Quick Concrete Quote</h4>
+                <button type="button" class="chat-close" id="chatClose">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="chat-content">
+                <p>Hi! Need concrete construction help? Let me know what you need:</p>
+                <form class="chat-form" id="chatForm" action="javascript:void(0);" method="post">
+                    <div class="chat-form-group">
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="chat-form-group">
+                        <input type="tel" placeholder="Phone number" required>
+                    </div>
+                    <div class="chat-form-group">
+                        <select required>
+                            <option value="">Select service</option>
+                            <option value="driveways">Driveways</option>
+                            <option value="foundations">Foundations</option>
+                            <option value="pathways">Pathways & Sidewalks</option>
+                            <option value="patios">Pool Decks & Outdoor Living</option>
+                            <option value="commercial">Commercial Concrete</option>
+                            <option value="repair">Concrete Repair & Resurfacing</option>
+                        </select>
+                    </div>
+                    <div class="chat-form-group">
+                        <textarea placeholder="Brief description of your project..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="chat-submit">
+                        <span class="emoji-icon">📤</span> Send Quote Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facebook-style Photo Album Modal -->
+    <div id="albumModal" class="album-modal">
+        <div class="album-modal-overlay"></div>
+        <div class="album-modal-container">
+            <button class="album-modal-close" aria-label="Close album">
+                <span class="material-icons">close</span>
+            </button>
+            <button class="album-modal-nav album-modal-prev" aria-label="Previous photo">
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <button class="album-modal-nav album-modal-next" aria-label="Next photo">
+                <span class="material-icons">chevron_right</span>
+            </button>
+            <div class="album-modal-content">
+                <div class="album-photo-container">
+                    <img id="albumMainPhoto" src="" alt="" class="album-main-photo">
+                    <div class="album-photo-loader">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                <div class="album-thumbnails" id="albumThumbnails"></div>
+            </div>
+            <div class="album-counter">
+                <span id="albumCurrentIndex">1</span> / <span id="albumTotalCount">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Work Section Photo Album Modal -->
+    <div id="ourWorkAlbumModal" class="album-modal">
+        <div class="album-modal-overlay"></div>
+        <div class="album-modal-container">
+            <button class="album-modal-close" aria-label="Close album">
+                <span class="material-icons">close</span>
+            </button>
+            <button class="album-modal-nav album-modal-prev" aria-label="Previous photo">
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <button class="album-modal-nav album-modal-next" aria-label="Next photo">
+                <span class="material-icons">chevron_right</span>
+            </button>
+            <div class="album-modal-content">
+                <div class="album-photo-container">
+                    <img id="ourWorkAlbumMainPhoto" src="" alt="" class="album-main-photo">
+                    <div class="album-photo-loader">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                <div class="album-thumbnails" id="ourWorkAlbumThumbnails"></div>
+            </div>
+            <div class="album-counter">
+                <span id="ourWorkAlbumCurrentIndex">1</span> / <span id="ourWorkAlbumTotalCount">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="services-config.js"></script>
+    <script src="script.js"></script>
+    <script src="gallery-album.js"></script>
+    <script src="our-work-album.js"></script>
+</body>
+</html> 
