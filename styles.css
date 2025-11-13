@@ -2171,7 +2171,7 @@ video {
 }
 
 .footer-section ul li a:hover {
-    color: #ffffff;
+    color: var(--color-green);
 }
 
 .footer-section p a {
@@ -2181,8 +2181,14 @@ video {
 }
 
 .footer-section p a:hover {
-    color: #ffffff;
-    opacity: 0.8;
+    color: var(--color-green);
+    opacity: 1;
+}
+
+/* General link hover styling for all text links (excluding buttons, nav links, and gallery items) */
+body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gallery-item):not(.gallery-page-item):not(.chat-submit):hover {
+    color: var(--color-green);
+    transition: color 0.3s ease;
 }
 
 .footer-section p .emoji-icon {
@@ -2194,26 +2200,55 @@ video {
 }
 
 
+.social-links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.socials-label {
+    color: #cccccc;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 .social-links {
     display: flex;
     gap: 0.9375rem;
-    margin-top: 1.25rem;
+    margin: 0;
 }
 
 .social-links a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
     background: #666666;
     color: white;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 1;
     border-radius: 50%;
     transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a .material-icons {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.social-links a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .social-links a:hover {
-    background: #666666;
+    background: #4267B2;
     transform: translateY(-0.1875rem);
 }
 
