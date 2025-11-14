@@ -12,7 +12,7 @@ const photoAlbums = {
         ]
     },
     'foundation-1': {
-        title: 'Commercial Foundation Project',
+        title: 'House Foundation',
         photos: [
             'https://tinyurl.com/486cyfmr',
             'https://tinyurl.com/m8c7xhhp',
@@ -23,8 +23,8 @@ const photoAlbums = {
             'https://tinyurl.com/389d5m4h',
         ]
     },
-    'patio-1': {
-        title: 'Decorative Concrete Pool Deck',
+    'pooldeck-1': {
+        title: 'Concrete Pool Deck',
         photos: [
             'https://tinyurl.com/3sscpzmd',
             'https://tinyurl.com/3jyb5dah',
@@ -49,7 +49,7 @@ const photoAlbums = {
             'https://tinyurl.com/2f4nd7fb'
         ]
     },
-    'commercial-1': {
+    'patio-1': {
         title: 'Industrial Concrete Installation',
         photos: [
             'https://tinyurl.com/ymuk54sy',
@@ -63,15 +63,14 @@ const photoAlbums = {
     'repair-1': {
         title: 'Concrete Restoration Project',
         photos: [
-            'https://images.unsplash.com/photo-1582515073490-39981397c445?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688969-a5fcd7366612?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/4bphn8yf',
+            'https://tinyurl.com/2s4kj8kt',
+            'https://tinyurl.com/yv55dmn7',
+            'https://tinyurl.com/mwtt36yf',
+            'https://tinyurl.com/29jfaprp'
         ]
     },
-    'patio-2': {
+    'repair-2': {
         title: 'Pool Deck Outdoor Living Space',
         photos: [
             'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop',
