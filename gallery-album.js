@@ -131,13 +131,14 @@ const photoAlbums = {
             'https://tinyurl.com/murasrsn'
         ]
     },
-    'home-walkway-1': {
+    'sidewalk-2': {
         title: 'Residential/Commercial Walkways',
         photos: [
-            'https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/565693346_1112042871088048_9004295495231802155_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=oO4fuXiIkr0Q7kNvwHZpg6d&_nc_oc=Adn5MXxU1BxDLWx_2thDQncyEfOErqXUlsEHG3GjNWe5_9rLDqr1QIudkJYSOrpfvFeZHxeVfPnLoKrqlTcZd27e&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3bpF1QGWuGZuUijQGLnE5g&oh=00_Afir5VR-EZApvGeS0FccVVQYwueF22YGUZQqpGgoaM0Abw&oe=69120774',
-            'https://images.unsplash.com/photo-1600456243364-8e8e0fc8c3e2?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/5ffk4dub',
+            'https://tinyurl.com/4jpf8nth',
+            'https://tinyurl.com/4tvr55f2',
+            'https://tinyurl.com/485yvr2x',
+            'https://tinyurl.com/3bjrshnh',
         ]
     },
     'home-patio-1': {
