@@ -70,36 +70,35 @@ const photoAlbums = {
             'https://tinyurl.com/29jfaprp'
         ]
     },
-    'repair-2': {
-        title: 'Pool Deck Outdoor Living Space',
+    'driveway-2': {
+        title: 'Residential Driveway Construction',
         photos: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1589374047341-933d5964d45f?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688969-a5fcd7366612?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/pn4d42jb',
+            'https://tinyurl.com/3zs46pmw',
+            'https://tinyurl.com/4jnmmy48'
         ]
     },
     'foundation-2': {
         title: 'Residential Foundation Work',
         photos: [
-            'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1617486491215-e594fc6c9359?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/ycyxn7rf',
+            'https://tinyurl.com/yyu5zxxt',
+            'https://tinyurl.com/yy8yvhbm',
+            'https://tinyurl.com/ywpdk7cm',
+            'https://tinyurl.com/5ayj93kd',
+            'https://tinyurl.com/yz5uja6d',
+            'https://tinyurl.com/3s59e9ce',
+            'https://tinyurl.com/5x2nay25',
+            'https://tinyurl.com/65f79v74'
         ]
     },
     'commercial-2': {
         title: 'Commercial Parking Lot',
         photos: [
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/3u4nu6b4',
+            'https://tinyurl.com/mrxak9f6',
+            'https://tinyurl.com/mfy4826v',
+            'https://tinyurl.com/5adwyace'
         ]
     },
     // Albums for "Our Work" section on homepage
