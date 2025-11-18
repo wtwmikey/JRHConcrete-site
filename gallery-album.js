@@ -144,21 +144,36 @@ const photoAlbums = {
     'home-patio-1': {
         title: 'Patio Constructions',
         photos: [
-            'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1589374047341-933d5964d45f?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/ywezfky3',
+            'https://tinyurl.com/yzu5cs8v',
+            'https://tinyurl.com/33t6adt5',
+            'https://tinyurl.com/3s82cpx4',
+            'https://tinyurl.com/3py2zyvu',
+            'https://tinyurl.com/5acrew9d'
         ]
     },
     'home-repair-1': {
         title: 'Restorations',
         photos: [
-            'https://images.unsplash.com/photo-1582515073490-39981397c445?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688969-a5d68b5b5c1a?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/mr27eu8r',
+            'https://tinyurl.com/9w62fw7d',
+            'https://tinyurl.com/yc2m3bmm',
+            'https://tinyurl.com/48k9dsme',
+            'https://tinyurl.com/bdesus54',
+            'https://tinyurl.com/4n3a33wj',
+            'https://tinyurl.com/35kkhys5',
+            'https://tinyurl.com/3ck85pj6',
+            'https://tinyurl.com/mu2vr7vw',
+            'https://tinyurl.com/yen3dxfj',
+            'https://tinyurl.com/54rkhtz2',
+            'https://tinyurl.com/2huensvx',
+            'https://tinyurl.com/yyup3xh8',
+            'https://tinyurl.com/3uy4d954',
+            'https://tinyurl.com/4hzx97u7',
+            'https://tinyurl.com/hpttty74',
+            'https://tinyurl.com/56w38t8z',
+            'https://tinyurl.com/2fjx95d2',
+            'https://tinyurl.com/2a8ptvbs'
         ]
     }
 };
@@ -518,15 +533,23 @@ const AlbumModal = {
     },
 
     showNext() {
-        if (this.currentIndex < this.photos.length - 1) {
-            this.showPhoto(this.currentIndex + 1);
-        }
+        if (this.photos.length === 0) return;
+        
+        // Circular navigation: if at the end, loop to the beginning
+        const nextIndex = this.currentIndex < this.photos.length - 1 
+            ? this.currentIndex + 1 
+            : 0;
+        this.showPhoto(nextIndex);
     },
 
     showPrevious() {
-        if (this.currentIndex > 0) {
-            this.showPhoto(this.currentIndex - 1);
-        }
+        if (this.photos.length === 0) return;
+        
+        // Circular navigation: if at the beginning, loop to the end
+        const prevIndex = this.currentIndex > 0 
+            ? this.currentIndex - 1 
+            : this.photos.length - 1;
+        this.showPhoto(prevIndex);
     },
 
     updateThumbnails() {
@@ -553,15 +576,68 @@ const AlbumModal = {
 
     updateActiveThumbnail() {
         const thumbs = this.thumbnails?.querySelectorAll('.album-thumbnail');
-        thumbs?.forEach((thumb, index) => {
+        if (!thumbs || !this.thumbnails) return;
+
+        const totalPhotos = this.photos.length;
+        
+        thumbs.forEach((thumb, index) => {
             if (index === this.currentIndex) {
                 thumb.classList.add('active');
-                // Scroll thumbnail into view
-                thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                
+                // Always ensure active thumbnail is visible in the thumbnail row
+                this.scrollThumbnailIntoView(thumb, index, totalPhotos);
             } else {
                 thumb.classList.remove('active');
             }
         });
+    },
+
+    scrollThumbnailIntoView(thumb, index, totalPhotos) {
+        if (!this.thumbnails) return;
+
+        const container = this.thumbnails;
+        
+        // Calculate scroll position with margin consideration
+        const leftMargin = 80; // Increased left margin for better spacing
+        const rightMargin = 16; // Right margin (1rem = 16px)
+        const thumbWidth = thumb.offsetWidth;
+        
+        // Get current scroll position and container dimensions
+        const currentScroll = container.scrollLeft;
+        const thumbOffset = thumb.offsetLeft;
+        const containerWidth = container.clientWidth;
+        const maxScroll = container.scrollWidth - containerWidth;
+        
+        // Calculate centered position with more left space
+        // Position thumbnail so it has more space on the left side
+        let targetScroll = thumbOffset - leftMargin;
+        
+        // For first few thumbnails, ensure they don't scroll past the start
+        if (index < 3) {
+            const minScroll = Math.max(0, thumbOffset - leftMargin);
+            targetScroll = Math.max(minScroll, targetScroll);
+        }
+        // For last few thumbnails, ensure they don't scroll past the end
+        else if (index >= totalPhotos - 3) {
+            const maxPossibleScroll = thumbOffset + thumbWidth - containerWidth + rightMargin;
+            const maxAllowedScroll = Math.min(maxScroll, maxPossibleScroll);
+            targetScroll = Math.min(maxAllowedScroll, targetScroll);
+        }
+        // For middle thumbnails, use left margin positioning
+        else {
+            targetScroll = thumbOffset - leftMargin;
+        }
+        
+        // Ensure scroll is within bounds
+        targetScroll = Math.max(0, Math.min(maxScroll, targetScroll));
+        
+        // Only scroll if the target is different from current position
+        if (Math.abs(targetScroll - currentScroll) > 1) {
+            container.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
+        }
     },
 
     updateCounter() {
@@ -572,13 +648,14 @@ const AlbumModal = {
     },
 
     updateNavigationButtons() {
+        // With circular navigation, buttons are always enabled
         if (this.prevBtn) {
-            this.prevBtn.style.opacity = this.currentIndex === 0 ? '0.3' : '1';
-            this.prevBtn.style.pointerEvents = this.currentIndex === 0 ? 'none' : 'auto';
+            this.prevBtn.style.opacity = '1';
+            this.prevBtn.style.pointerEvents = 'auto';
         }
         if (this.nextBtn) {
-            this.nextBtn.style.opacity = this.currentIndex === this.photos.length - 1 ? '0.3' : '1';
-            this.nextBtn.style.pointerEvents = this.currentIndex === this.photos.length - 1 ? 'none' : 'auto';
+            this.nextBtn.style.opacity = '1';
+            this.nextBtn.style.pointerEvents = 'auto';
         }
     },
 
