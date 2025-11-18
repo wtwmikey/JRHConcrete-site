@@ -463,6 +463,7 @@ video {
 
 .hero-subtitle {
     font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 2.5rem;
     text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.5);
     max-width: 40rem;
@@ -583,8 +584,8 @@ video {
 }
 
 .stat-number {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 4.2rem;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 0.75rem;
     line-height: 1.2;
@@ -603,9 +604,9 @@ video {
 }
 
 .stat-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
     margin-bottom: 0.75rem;
-    color: white;
+    color: var(--color-green);
     font-weight: 600;
     text-align: center;
 }
@@ -2864,7 +2865,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     }
     
     .stat-number {
-        font-size: 3rem;
+        font-size: 4.2rem;
     }
     
     .expert-text h2 {
@@ -2980,7 +2981,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     }
     
     .stat-number {
-        font-size: 2.5rem;
+        font-size: 3.6rem;
     }
     
     .trust-indicators {
@@ -3507,7 +3508,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     }
     
     .gallery-header h1 {
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
     
     .gallery-header p {
@@ -3562,7 +3563,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     }
     
     .stat-number {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     .expert-text h2 {
@@ -3763,7 +3764,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
 /* Extra Small Mobile */
 @media (max-width: 360px) {
     .gallery-header h1 {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
     
     .gallery-header p {
@@ -4277,6 +4278,26 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     color: inherit;
 }
 
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Desktop hover effects - only on devices that support hover */
+@media (min-width: 769px) and (hover: hover) {
+    .gallery-item:hover::before {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
 .gallery-item:hover {
     transform: translateY(-0.3125rem);
     box-shadow: 0 0.625rem 2rem rgba(0, 0, 0, 0.15);
@@ -4379,7 +4400,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
 }
 
 .gallery-header h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
     margin-bottom: 1rem;
     color: white;
     font-weight: 700;
@@ -4423,6 +4444,26 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+.gallery-page-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Desktop hover effects - only on devices that support hover */
+@media (min-width: 769px) and (hover: hover) {
+    .gallery-page-item:hover::before {
+        background: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .gallery-page-item:hover {
@@ -4480,7 +4521,7 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     }
     
     .gallery-header h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
         line-height: 1.2;
     }
@@ -4501,6 +4542,45 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
     .gallery-page-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+    
+    /* Mobile-specific tap indicator for gallery items */
+    .gallery-page-item::after {
+        content: 'Tap to view';
+        position: absolute;
+        bottom: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 0.375rem;
+        white-space: nowrap;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.9;
+    }
+    
+    .gallery-item::after {
+        content: 'Tap to view';
+        position: absolute;
+        bottom: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 0.375rem;
+        white-space: nowrap;
+        z-index: 2;
+        pointer-events: none;
+        opacity: 0.9;
     }
 }
 
