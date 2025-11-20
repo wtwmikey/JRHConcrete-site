@@ -10,7 +10,9 @@ const ourWorkAlbums = {
             'https://tinyurl.com/42dap9td',
             'https://tinyurl.com/2nmp62ur',
             'https://tinyurl.com/4jnmmy48',
-            'https://tinyurl.com/2s35hph4'
+            'https://tinyurl.com/2s35hph4',
+            'https://tinyurl.com/4u6dsjc7',
+            'https://tinyurl.com/42xpjuet'
         ]
     },
     'home-foundation-1': {
@@ -22,47 +24,67 @@ const ourWorkAlbums = {
             'https://tinyurl.com/mr48rseu',
             'https://tinyurl.com/22xjeu4h',
             'https://tinyurl.com/4m24zk68',
-            '',
-            ''
+            'https://tinyurl.com/9cjhpkc8',
+            'https://tinyurl.com/632h4479',
+            'https://tinyurl.com/ycxtuzhu'
         ]
     },
     'home-pooldeck-1': {
         title: 'Pool Deck Constructions',
         photos: [
             'https://tinyurl.com/34bsmez6',
-            'https://images.unsplash.com/photo-1589374047341-933d5964d45f?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/bdd63v9y',
+            'https://tinyurl.com/yc88m7ne',
+            'https://tinyurl.com/5xp22tcs',
+            'https://tinyurl.com/hpr82h64'
         ]
     },
     'home-walkway-1': {
         title: 'Residential/Commercial Walkways',
         photos: [
-            'https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/565693346_1112042871088048_9004295495231802155_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=oO4fuXiIkr0Q7kNvwHZpg6d&_nc_oc=Adn5MXxU1BxDLWx_2thDQncyEfOErqXUlsEHG3GjNWe5_9rLDqr1QIudkJYSOrpfvFeZHxeVfPnLoKrqlTcZd27e&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=3bpF1QGWuGZuUijQGLnE5g&oh=00_Afir5VR-EZApvGeS0FccVVQYwueF22YGUZQqpGgoaM0Abw&oe=69120774',
-            'https://images.unsplash.com/photo-1600456243364-8e8e0fc8c3e2?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688909-1c88e0e49047?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/ywbz3vaj',
+            'https://tinyurl.com/5cs43y6u',
+            'https://tinyurl.com/2d22cbfu',
+            'https://tinyurl.com/47zuauwv',
+            'https://tinyurl.com/dwmrxf2e',
+            'https://tinyurl.com/2sypp98r',
+            'https://tinyurl.com/sa8ppn8t',
+            'https://tinyurl.com/3fmr8628',
+            'https://tinyurl.com/3u9azm8f',
+            'https://tinyurl.com/6fcfm64j',
+            'https://tinyurl.com/jzwkk39j'
         ]
     },
     'home-patio-1': {
         title: 'Patio Constructions',
         photos: [
-            'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1589374047341-933d5964d45f?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/ya5yfvsf',
+            'https://tinyurl.com/3sen3n97',
+            'https://tinyurl.com/2s4682f7',
+            'https://tinyurl.com/2tjatx7f',
+            'https://tinyurl.com/3r3n38ef',
+            'https://tinyurl.com/3evp6fc9',
+            'https://tinyurl.com/mvc2xj7n',
+            'https://tinyurl.com/ywebd6re',
+            'https://tinyurl.com/2m6mf6k4'
         ]
     },
     'home-repair-1': {
         title: 'Restorations',
         photos: [
-            'https://images.unsplash.com/photo-1582515073490-39981397c445?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607688969-a5d68b5b5c1a?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=900&fit=crop',
-            'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop'
+            'https://tinyurl.com/fatwjaw6',
+            'https://tinyurl.com/5ak27kj7',
+            'https://tinyurl.com/4v7eupy4',
+            'https://tinyurl.com/ybrn7upu',
+            'https://tinyurl.com/z7rw4cet',
+            'https://tinyurl.com/4kzndzuy',
+            'https://tinyurl.com/yfmtjekd',
+            'https://tinyurl.com/mpscs2un',
+            'https://tinyurl.com/2ppc7x7a',
+            'https://tinyurl.com/yas98dwm',
+            'https://tinyurl.com/ybhwbxjb',
+            'https://tinyurl.com/yc8b43pp',
+            'https://tinyurl.com/4x738b6p'
         ]
     }
 };

@@ -168,7 +168,9 @@ const photoAlbums = {
             'https://tinyurl.com/hpttty74',
             'https://tinyurl.com/56w38t8z',
             'https://tinyurl.com/2fjx95d2',
-            'https://tinyurl.com/2a8ptvbs'
+            'https://tinyurl.com/2a8ptvbs',
+            'https://tinyurl.com/yc8b43pp',
+            'https://tinyurl.com/4x738b6p'
         ]
     },
     // New albums for additional gallery rows
