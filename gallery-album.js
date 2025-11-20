@@ -7,8 +7,8 @@ const photoAlbums = {
     'driveway-1': {
         title: 'Residential Driveway Installation',
         photos: [
-            'https://tinyurl.com/5n7jsvh9',
-            'https://tinyurl.com/42dap9td'
+            'Images/driveways/2.jpg',
+            'Images/driveways/1.jpg'
         ]
     },
     'foundation-1': {

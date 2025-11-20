@@ -7,84 +7,77 @@ const ourWorkAlbums = {
     'home-driveway-1': {
         title: 'Residential Driveways',
         photos: [
-            'https://tinyurl.com/42dap9td',
-            'https://tinyurl.com/2nmp62ur',
-            'https://tinyurl.com/4jnmmy48',
-            'https://tinyurl.com/2s35hph4',
-            'https://tinyurl.com/4u6dsjc7',
-            'https://tinyurl.com/42xpjuet'
+            'Images/driveways/1.jpg',
+            'Images/driveways/3.jpg',
+            'Images/driveways/4.jpg',
+            'Images/driveways/5.jpg',
+            'Images/driveways/6.jpg'
         ]
     },
     'home-foundation-1': {
         title: 'Housing Foundations',
         photos: [
-            'https://tinyurl.com/4bs2zc7x',
-            'https://tinyurl.com/3aay2art',
-            'https://tinyurl.com/2sud926v',
-            'https://tinyurl.com/mr48rseu',
-            'https://tinyurl.com/22xjeu4h',
-            'https://tinyurl.com/4m24zk68',
-            'https://tinyurl.com/9cjhpkc8',
-            'https://tinyurl.com/632h4479',
-            'https://tinyurl.com/ycxtuzhu'
+            'Images/foundations/1_1.jpg',
+            'Images/foundations/1_2.jpg',
+            'Images/foundations/1_3.jpg',
+            'Images/foundations/1_4.jpg',
+            'Images/foundations/1_5.jpg',
+            'Images/foundations/1_6.jpg',
+            'Images/foundations/1-7.jpg',
+            'Images/foundations/1_8.jpg',
+            'Images/foundations/1_9.jpg'
         ]
     },
     'home-pooldeck-1': {
         title: 'Pool Deck Constructions',
         photos: [
-            'https://tinyurl.com/34bsmez6',
-            'https://tinyurl.com/bdd63v9y',
-            'https://tinyurl.com/yc88m7ne',
-            'https://tinyurl.com/5xp22tcs',
-            'https://tinyurl.com/hpr82h64'
+            'Images/pool/2_1.jpg',
+            'Images/pool/2_2.jpg',
+            'Images/pool/2_3.jpg',
+            'Images/pool/2-4.jpg',
+            'Images/pool/2-5.jpg'
         ]
     },
     'home-walkway-1': {
         title: 'Residential/Commercial Walkways',
         photos: [
-            'https://tinyurl.com/ywbz3vaj',
-            'https://tinyurl.com/5cs43y6u',
-            'https://tinyurl.com/2d22cbfu',
-            'https://tinyurl.com/47zuauwv',
-            'https://tinyurl.com/dwmrxf2e',
-            'https://tinyurl.com/2sypp98r',
-            'https://tinyurl.com/sa8ppn8t',
-            'https://tinyurl.com/3fmr8628',
-            'https://tinyurl.com/3u9azm8f',
-            'https://tinyurl.com/6fcfm64j',
-            'https://tinyurl.com/jzwkk39j'
+            'Images/walkways/3-1.jpg',
+            'Images/walkways/3-2.jpg',
+            'Images/walkways/3-3.jpg',
+            'Images/walkways/3-4.jpg',
+            'Images/walkways/3-5.jpg',
+            'Images/walkways/3-6.jpg',
+            'Images/walkways/3-7.jpg',
+            'Images/walkways/3-8.jpg',
+            'Images/walkways/3-9.jpg',
+            'Images/walkways/3-10.jpg',
+            'Images/walkways/3-11.jpg'
         ]
     },
     'home-patio-1': {
         title: 'Patio Constructions',
         photos: [
-            'https://tinyurl.com/ya5yfvsf',
-            'https://tinyurl.com/3sen3n97',
-            'https://tinyurl.com/2s4682f7',
-            'https://tinyurl.com/2tjatx7f',
-            'https://tinyurl.com/3r3n38ef',
-            'https://tinyurl.com/3evp6fc9',
-            'https://tinyurl.com/mvc2xj7n',
-            'https://tinyurl.com/ywebd6re',
-            'https://tinyurl.com/2m6mf6k4'
+            'Images/patio/4-1.jpg',
+            'Images/patio/4-2.jpg',
+            'Images/patio/4-3.jpg',
+            'Images/patio/4-4.jpg',
+            'Images/patio/4-5.jpg',
+            'Images/patio/4-6.jpg',
+            'Images/patio/4-7.jpg',
+            'Images/patio/4-8.jpg',
+            'Images/patio/4-9.jpg',
         ]
     },
     'home-repair-1': {
         title: 'Restorations',
         photos: [
-            'https://tinyurl.com/fatwjaw6',
-            'https://tinyurl.com/5ak27kj7',
-            'https://tinyurl.com/4v7eupy4',
-            'https://tinyurl.com/ybrn7upu',
-            'https://tinyurl.com/z7rw4cet',
-            'https://tinyurl.com/4kzndzuy',
-            'https://tinyurl.com/yfmtjekd',
-            'https://tinyurl.com/mpscs2un',
-            'https://tinyurl.com/2ppc7x7a',
-            'https://tinyurl.com/yas98dwm',
-            'https://tinyurl.com/ybhwbxjb',
-            'https://tinyurl.com/yc8b43pp',
-            'https://tinyurl.com/4x738b6p'
+            'Images/repairs/5-1.jpg',
+            'Images/repairs/5-2.jpg',
+            'Images/repairs/5-3.jpg',
+            'Images/repairs/5-4.jpg',
+            'Images/repairs/5-5.jpg',
+            'Images/repairs/5-6.jpg',
+            'Images/repairs/5-7.jpg'
         ]
     }
 };
