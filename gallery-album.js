@@ -45,7 +45,13 @@ const photoAlbums = {
             'Images/gallery/6/-6-2.jpg',
             'Images/gallery/6/-6-3.jpg',
             'Images/gallery/6/-6-4.jpg',
-            'Images/gallery/6/-6-5.jpg'
+            'Images/gallery/6/-6-5.jpg',
+            {
+                type: 'video',
+                src: 'Images/gallery/6/-6-v1.mp4',
+                poster: 'Images/gallery/6/-6-4.jpg',
+                caption: 'Pouring the walkway section'
+            }
         ]
     },
     'patio-1': {
@@ -158,17 +164,28 @@ const photoAlbums = {
             'Images/gallery/7/8-2.jpg',
             'Images/gallery/7/8-3.jpg',
             'Images/gallery/7/8-4.jpg',
-            'Images/gallery/7/8-5.jpg'
+            'Images/gallery/7/8-5.jpg',
+            {
+                type: 'video',
+                src: 'Images/gallery/7/8-v1.mp4',
+                poster: 'Images/gallery/7/8-4.jpg',
+                caption: 'Pumping concrete for the driveway base'
+            },
+            {
+                type: 'video',
+                src: 'Images/gallery/7/8-v2.mp4',
+                poster: 'Images/gallery/7/8-5.jpg',
+                caption: 'Finished driveway walkthrough'
+            }
         ]
     },
     'foundation-3': {
         title: 'Commercial Foundation Project',
         photos: [
-            'https://tinyurl.com/486cyfmr',
-            'https://tinyurl.com/m8c7xhhp',
-            'https://tinyurl.com/bdcu7887',
-            'https://tinyurl.com/esaa7hjt',
-            'https://tinyurl.com/bd4r4w7h'
+            'Images/gallery/20/20-1.jpg',
+            'Images/gallery/20/20-2.jpg',
+            'Images/gallery/20/20-3.jpg',
+            'Images/gallery/20/20-4.jpg'
         ]
     },
     'deck-1': {
@@ -179,20 +196,37 @@ const photoAlbums = {
             'Images/gallery/16/16-4.jpg'
         ]
     },
-    'sidewalk-3': {
-        title: 'Commercial Sidewalk Installation',
+    'pool-3': {
+        title: 'Residential Pool Construction',
         photos: [
+            'Images/gallery/21/21-1.jpg',
+            'Images/gallery/21/21-2.jpg',
+            'Images/gallery/21/21-3.jpg',
+            'Images/gallery/21/21-4.jpg',
+            'Images/gallery/21/21-5.jpg',
+            'Images/gallery/21/21-6.jpg',
+            'Images/gallery/21/21-7.jpg'
 
         ]
     },
-    'patio-2': {
-        title: 'Residential Patio Construction',
+    'stair': {
+        title: 'Residential Stairs Construction',
         photos: [
-            'https://tinyurl.com/ymuk54sy',
-            'https://tinyurl.com/5786xx96',
-            'https://tinyurl.com/ywezfky3',
-            'https://tinyurl.com/yzu5cs8v',
-            'https://tinyurl.com/33t6adt5'
+            'Images/gallery/18/18-1.jpg',
+            'Images/gallery/18/18-2.jpg',
+            'Images/gallery/18/18-3.jpg',
+            'Images/gallery/18/18-4.jpg',
+            'Images/gallery/18/18-5.jpg'
+        ]
+    },
+
+    'pool-2': {
+        title: 'Residential Pool Construction',
+        photos: [
+            'Images/gallery/17/17-1.jpg',
+            'Images/gallery/17/17-2.jpg',
+            'Images/gallery/17/17-3.jpg',
+            'Images/gallery/17/17-4.jpg'
         ]
     },
 };
@@ -210,6 +244,7 @@ const AlbumModal = {
     currentIndex: 0,
     currentAlbum: null,
     photos: [],
+    videoElement: null,
     touchStartX: 0,
     touchEndX: 0,
     touchStartY: 0,
@@ -233,6 +268,19 @@ const AlbumModal = {
         this.closeBtn = this.modal?.querySelector('.album-modal-close');
 
         if (!this.modal) return;
+
+        if (this.photoContainer && !this.videoElement) {
+            this.videoElement = document.createElement('video');
+            this.videoElement.className = 'album-main-video';
+            this.videoElement.controls = true;
+            this.videoElement.preload = 'metadata';
+            this.videoElement.playsInline = true;
+            this.videoElement.setAttribute('webkit-playsinline', 'true');
+            this.videoElement.controlsList = 'nodownload';
+            this.videoElement.style.display = 'none';
+            this.videoElement.setAttribute('aria-label', 'Album video player');
+            this.photoContainer.insertBefore(this.videoElement, this.photoContainer.firstChild);
+        }
 
         this.initGalleryItems();
         this.initEventListeners();
@@ -287,6 +335,8 @@ const AlbumModal = {
             // Check if clicking on the photo image itself or its children
             const isPhoto = e.target === this.mainPhoto || 
                            e.target.closest('.album-main-photo') ||
+                           e.target === this.videoElement ||
+                           e.target.closest('.album-main-video') ||
                            e.target.closest('.album-photo-loader');
             
             // Check if clicking on interactive elements
@@ -304,6 +354,9 @@ const AlbumModal = {
 
         // Photo image click - prevent closing when clicking on photo
         this.mainPhoto?.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        this.videoElement?.addEventListener('click', (e) => {
             e.stopPropagation();
         });
 
@@ -336,6 +389,8 @@ const AlbumModal = {
             // Track touch start position for tap detection
             const isPhoto = e.target === this.mainPhoto || 
                            e.target.closest('.album-main-photo') ||
+                           e.target === this.videoElement ||
+                           e.target.closest('.album-main-video') ||
                            e.target.closest('.album-photo-loader');
             
             // Only track if touch starts outside photo
@@ -350,6 +405,8 @@ const AlbumModal = {
             // Check if tapping on the photo image itself
             const isPhoto = e.target === this.mainPhoto || 
                            e.target.closest('.album-main-photo') ||
+                           e.target === this.videoElement ||
+                           e.target.closest('.album-main-video') ||
                            e.target.closest('.album-photo-loader');
             
             // Check if clicking on interactive elements
@@ -511,6 +568,16 @@ const AlbumModal = {
         this.modal.classList.remove('active');
         document.body.style.overflow = '';
         this.allowBodyScroll();
+        if (this.videoElement) {
+            this.videoElement.pause();
+            this.videoElement.removeAttribute('src');
+            this.videoElement.load();
+            this.videoElement.style.display = 'none';
+        }
+        if (this.mainPhoto) {
+            this.mainPhoto.style.display = 'block';
+            this.mainPhoto.style.opacity = '1';
+        }
         this.currentIndex = 0;
         this.currentAlbum = null;
         this.photos = [];
@@ -520,30 +587,74 @@ const AlbumModal = {
         if (index < 0 || index >= this.photos.length) return;
 
         this.currentIndex = index;
-        const photoUrl = this.photos[index];
+        const mediaItem = this.photos[index];
+        const media = (typeof mediaItem === 'object' && mediaItem !== null)
+            ? mediaItem
+            : { type: 'image', src: mediaItem };
+        const mediaType = media.type || 'image';
+        const mediaSrc = media.src;
+        const mediaAlt = media.alt || `Photo ${index + 1} of ${this.photos.length}`;
+        const mediaPoster = media.poster;
 
         // Show loader
         const loader = this.modal.querySelector('.album-photo-loader');
         if (loader) loader.style.display = 'flex';
 
-        // Add fade transition
-        this.mainPhoto.style.opacity = '0';
-        this.mainPhoto.style.transition = 'opacity 0.3s ease';
+        if (mediaType === 'video' && this.videoElement) {
+            // Hide image while video is active
+            if (this.mainPhoto) {
+                this.mainPhoto.style.opacity = '0';
+                this.mainPhoto.style.display = 'none';
+            }
 
-        // Load image
-        const img = new Image();
-        img.onload = () => {
-            this.mainPhoto.src = photoUrl;
-            this.mainPhoto.alt = `Photo ${index + 1} of ${this.photos.length}`;
-            this.mainPhoto.style.opacity = '1';
-            if (loader) loader.style.display = 'none';
-        };
-        img.onerror = () => {
-            if (loader) loader.style.display = 'none';
-            this.mainPhoto.style.opacity = '1';
-            console.error('Failed to load image:', photoUrl);
-        };
-        img.src = photoUrl;
+            // Prepare video element
+            this.videoElement.style.display = 'block';
+            this.videoElement.style.opacity = '0';
+            this.videoElement.pause();
+
+            const handleLoadedData = () => {
+                this.videoElement.removeEventListener('loadeddata', handleLoadedData);
+                this.videoElement.currentTime = 0;
+                this.videoElement.pause();
+                this.videoElement.style.opacity = '1';
+                if (loader) loader.style.display = 'none';
+            };
+
+            this.videoElement.addEventListener('loadeddata', handleLoadedData);
+            this.videoElement.src = mediaSrc;
+            this.videoElement.removeAttribute('poster');
+            this.videoElement.load();
+        } else {
+            // Ensure video element is reset/hidden
+            if (this.videoElement) {
+                this.videoElement.pause();
+                this.videoElement.removeAttribute('src');
+                this.videoElement.load();
+                this.videoElement.style.display = 'none';
+            }
+
+            if (this.mainPhoto) {
+                this.mainPhoto.style.display = 'block';
+                this.mainPhoto.style.opacity = '0';
+                this.mainPhoto.style.transition = 'opacity 0.3s ease';
+
+                const img = new Image();
+                img.onload = () => {
+                    this.mainPhoto.src = mediaSrc;
+                    this.mainPhoto.alt = mediaAlt;
+                    this.mainPhoto.style.opacity = '1';
+                    if (loader) loader.style.display = 'none';
+                };
+                img.onerror = () => {
+                    if (loader) loader.style.display = 'none';
+                    this.mainPhoto.style.opacity = '1';
+                    console.error('Failed to load image:', mediaSrc);
+                };
+                img.src = mediaSrc;
+            } else if (loader) {
+                loader.style.display = 'none';
+            }
+        }
 
         // Update active thumbnail
         this.updateActiveThumbnail();
@@ -579,16 +690,50 @@ const AlbumModal = {
             const thumb = document.createElement('div');
             thumb.className = 'album-thumbnail';
             thumb.setAttribute('data-index', index);
+
+            const mediaData = (typeof photo === 'object' && photo !== null) ? photo : null;
+            const mediaType = mediaData?.type || 'image';
+            const isVideo = mediaType === 'video';
+            const thumbnailSrc = mediaData
+                ? (isVideo ? mediaData.src : (mediaData.thumbnail || mediaData.poster || mediaData.src))
+                : photo;
+
             if (index === this.currentIndex) {
                 thumb.classList.add('active');
             }
+            if (mediaType === 'video') {
+                thumb.classList.add('is-video');
+            }
 
-            const img = document.createElement('img');
-            img.src = photo;
-            img.alt = `Thumbnail ${index + 1}`;
-            img.loading = 'lazy';
+            if (mediaType === 'video') {
+                const videoThumb = document.createElement('video');
+                videoThumb.src = thumbnailSrc || '';
+                videoThumb.muted = true;
+                videoThumb.playsInline = true;
+                videoThumb.preload = 'metadata';
+                videoThumb.setAttribute('aria-hidden', 'true');
+                videoThumb.className = 'album-thumbnail-media';
+                videoThumb.controls = false;
+                videoThumb.loop = false;
+                videoThumb.addEventListener('loadeddata', () => {
+                    videoThumb.currentTime = 0;
+                    videoThumb.pause();
+                });
+                thumb.appendChild(videoThumb);
 
-            thumb.appendChild(img);
+                const badge = document.createElement('span');
+                badge.className = 'album-thumbnail-badge';
+                badge.setAttribute('aria-label', 'Video thumbnail');
+                badge.innerHTML = '<span class="material-icons">play_arrow</span>';
+                thumb.appendChild(badge);
+            } else {
+                const img = document.createElement('img');
+                img.src = thumbnailSrc;
+                img.alt = `Thumbnail ${index + 1}`;
+                img.loading = 'lazy';
+                thumb.appendChild(img);
+            }
+
             this.thumbnails.appendChild(thumb);
         });
     },
