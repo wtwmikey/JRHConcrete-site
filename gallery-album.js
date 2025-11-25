@@ -50,7 +50,7 @@ const photoAlbums = {
                 type: 'video',
                 src: 'Images/gallery/6/-6-v1.mp4',
                 poster: 'Images/gallery/6/-6-4.jpg',
-                caption: 'Pouring the walkway section'
+                caption: 'SPouring the walkway section'
             }
         ]
     },
