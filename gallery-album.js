@@ -245,6 +245,8 @@ const AlbumModal = {
     currentAlbum: null,
     photos: [],
     videoElement: null,
+    videoOverlay: null,
+    paginationDotsContainer: null,
     touchStartX: 0,
     touchEndX: 0,
     touchStartY: 0,
@@ -279,7 +281,56 @@ const AlbumModal = {
             this.videoElement.controlsList = 'nodownload';
             this.videoElement.style.display = 'none';
             this.videoElement.setAttribute('aria-label', 'Album video player');
+            this.videoElement.autoplay = false;
+            this.videoElement.controls = true;
             this.photoContainer.insertBefore(this.videoElement, this.photoContainer.firstChild);
+
+            this.videoOverlay = document.createElement('button');
+            this.videoOverlay.className = 'album-video-overlay';
+            this.videoOverlay.type = 'button';
+            this.videoOverlay.setAttribute('aria-label', 'Play video');
+            this.videoOverlay.innerHTML = '<span class="material-icons">play_arrow</span>';
+            this.videoOverlay.style.display = 'none';
+            this.photoContainer.appendChild(this.videoOverlay);
+
+            this.videoOverlay.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.playCurrentVideo();
+            });
+
+            this.videoElement.addEventListener('play', () => {
+                this.toggleVideoOverlay(false);
+            });
+
+            this.videoElement.addEventListener('pause', () => {
+                if (!this.videoElement.ended) {
+                    this.toggleVideoOverlay(true);
+                }
+            });
+
+            this.videoElement.addEventListener('ended', () => {
+                this.videoElement.currentTime = 0;
+                this.videoElement.pause();
+                this.toggleVideoOverlay(true);
+            });
+        }
+
+        if (this.photoContainer && !this.paginationDotsContainer) {
+            this.paginationDotsContainer = document.createElement('div');
+            this.paginationDotsContainer.className = 'album-pagination-dots';
+            this.paginationDotsContainer.style.display = 'none';
+            this.photoContainer.appendChild(this.paginationDotsContainer);
+
+            this.paginationDotsContainer.addEventListener('click', (e) => {
+                const dot = e.target.closest('.album-pagination-dot');
+                if (dot) {
+                    e.stopPropagation();
+                    const index = Number(dot.dataset.index);
+                    if (!Number.isNaN(index)) {
+                        this.showPhoto(index);
+                    }
+                }
+            });
         }
 
         this.initGalleryItems();
@@ -337,6 +388,8 @@ const AlbumModal = {
                            e.target.closest('.album-main-photo') ||
                            e.target === this.videoElement ||
                            e.target.closest('.album-main-video') ||
+                           e.target === this.videoOverlay ||
+                           e.target.closest('.album-video-overlay') ||
                            e.target.closest('.album-photo-loader');
             
             // Check if clicking on interactive elements
@@ -391,6 +444,8 @@ const AlbumModal = {
                            e.target.closest('.album-main-photo') ||
                            e.target === this.videoElement ||
                            e.target.closest('.album-main-video') ||
+                           e.target === this.videoOverlay ||
+                           e.target.closest('.album-video-overlay') ||
                            e.target.closest('.album-photo-loader');
             
             // Only track if touch starts outside photo
@@ -407,6 +462,8 @@ const AlbumModal = {
                            e.target.closest('.album-main-photo') ||
                            e.target === this.videoElement ||
                            e.target.closest('.album-main-video') ||
+                           e.target === this.videoOverlay ||
+                           e.target.closest('.album-video-overlay') ||
                            e.target.closest('.album-photo-loader');
             
             // Check if clicking on interactive elements
@@ -573,6 +630,11 @@ const AlbumModal = {
             this.videoElement.removeAttribute('src');
             this.videoElement.load();
             this.videoElement.style.display = 'none';
+            this.toggleVideoOverlay(false);
+        }
+        if (this.paginationDotsContainer) {
+            this.paginationDotsContainer.style.display = 'none';
+            this.paginationDotsContainer.innerHTML = '';
         }
         if (this.mainPhoto) {
             this.mainPhoto.style.display = 'block';
@@ -611,6 +673,9 @@ const AlbumModal = {
             this.videoElement.style.display = 'block';
             this.videoElement.style.opacity = '0';
             this.videoElement.pause();
+            this.videoElement.autoplay = false;
+            this.videoElement.currentTime = 0;
+            this.toggleVideoOverlay(true);
 
             const handleLoadedData = () => {
                 this.videoElement.removeEventListener('loadeddata', handleLoadedData);
@@ -631,6 +696,7 @@ const AlbumModal = {
                 this.videoElement.removeAttribute('src');
                 this.videoElement.load();
                 this.videoElement.style.display = 'none';
+                this.toggleVideoOverlay(false);
             }
 
             if (this.mainPhoto) {
@@ -660,6 +726,7 @@ const AlbumModal = {
         this.updateActiveThumbnail();
         this.updateCounter();
         this.updateNavigationButtons();
+        this.updatePaginationDots();
     },
 
     showNext() {
@@ -715,6 +782,7 @@ const AlbumModal = {
                 videoThumb.className = 'album-thumbnail-media';
                 videoThumb.controls = false;
                 videoThumb.loop = false;
+                videoThumb.autoplay = false;
                 videoThumb.addEventListener('loadeddata', () => {
                     videoThumb.currentTime = 0;
                     videoThumb.pause();
@@ -821,6 +889,58 @@ const AlbumModal = {
             this.nextBtn.style.opacity = '1';
             this.nextBtn.style.pointerEvents = 'auto';
         }
+    },
+
+    updatePaginationDots() {
+        if (!this.paginationDotsContainer) return;
+
+        const total = this.photos.length;
+        if (total <= 1) {
+            this.paginationDotsContainer.style.display = 'none';
+            this.paginationDotsContainer.innerHTML = '';
+            return;
+        }
+
+        const maxDots = Math.min(total, 5);
+        let startIndex = 0;
+
+        if (total > maxDots) {
+            const centerOffset = Math.floor(maxDots / 2);
+            startIndex = this.currentIndex - centerOffset;
+            if (startIndex < 0) startIndex = 0;
+            if (startIndex + maxDots > total) {
+                startIndex = total - maxDots;
+            }
+        }
+
+        this.paginationDotsContainer.innerHTML = '';
+        for (let i = 0; i < maxDots; i++) {
+            const absoluteIndex = startIndex + i;
+            const dotButton = document.createElement('button');
+            dotButton.type = 'button';
+            dotButton.className = 'album-pagination-dot';
+            dotButton.dataset.index = absoluteIndex;
+            dotButton.setAttribute('aria-label', `View item ${absoluteIndex + 1}`);
+            if (absoluteIndex === this.currentIndex) {
+                dotButton.classList.add('active');
+            }
+            this.paginationDotsContainer.appendChild(dotButton);
+        }
+
+        this.paginationDotsContainer.style.display = 'flex';
+    },
+
+    playCurrentVideo() {
+        if (!this.videoElement) return;
+        this.videoElement.play().catch(() => {
+            // playback might be blocked; keep overlay visible
+            this.toggleVideoOverlay(true);
+        });
+    },
+
+    toggleVideoOverlay(show) {
+        if (!this.videoOverlay) return;
+        this.videoOverlay.style.display = show ? 'flex' : 'none';
     },
 
     preventBodyScroll() {
