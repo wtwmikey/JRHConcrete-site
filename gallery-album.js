@@ -14,163 +14,140 @@ const photoAlbums = {
     'foundation-1': {
         title: 'House Foundation',
         photos: [
-            'https://tinyurl.com/486cyfmr',
-            'https://tinyurl.com/m8c7xhhp',
-            'https://tinyurl.com/yhsjd9z6',
-            'https://tinyurl.com/ymw3t85y',
-            'https://tinyurl.com/yxmxh6ky',
-            'https://tinyurl.com/29ff568a',
-            'https://tinyurl.com/389d5m4h',
+            'Images/gallery/2/1--1.png',
+            'Images/gallery/2/1--2.png',
+            'Images/gallery/2/1--3.png',
+            'Images/gallery/2/1--4.png',
+            'Images/gallery/2/1--5.png',
+            'Images/gallery/2/1--6.png',
+            'Images/gallery/2/1--7.png'
         ]
     },
     'pooldeck-1': {
         title: 'Concrete Pool Deck',
         photos: [
-            'https://tinyurl.com/3sscpzmd',
-            'https://tinyurl.com/3jyb5dah',
-            'https://tinyurl.com/4t74pswp',
-            'https://tinyurl.com/355c2vfw',
-            'https://tinyurl.com/ntb74nbd',
-            'https://tinyurl.com/mpr6atf6',
-            'https://tinyurl.com/4cv95dte',
-            'https://tinyurl.com/bdcr62cb',
-            'https://tinyurl.com/2wk97256',
-            'https://tinyurl.com/m8n9y74m',
-            'https://tinyurl.com/mubbcwmd',
+            'Images/gallery/3/2--1.png',
+            'Images/gallery/3/2--2.png',
+            'Images/gallery/3/2--3.png',
+            'Images/gallery/3/2--4.png',
+            'Images/gallery/3/2--5.png',
+            'Images/gallery/3/2--6.png',
+            'Images/gallery/3/2--7.png',
+            'Images/gallery/3/2--8.png',
+            'Images/gallery/3/2--9.png',
+            'Images/gallery/3/2--10.png'
         ]
     },
     'sidewalk-1': {
         title: 'Professional Sidewalk Installation',
         photos: [
-            'https://tinyurl.com/92cpb46p',
-            'https://tinyurl.com/yvnnukfx',
-            'https://tinyurl.com/4rmntze3',
-            'https://tinyurl.com/mtjrmsf2',
-            'https://tinyurl.com/2f4nd7fb'
+            'Images/gallery/6/-6-1.jpg',
+            'Images/gallery/6/-6-2.jpg',
+            'Images/gallery/6/-6-3.jpg',
+            'Images/gallery/6/-6-4.jpg',
+            'Images/gallery/6/-6-5.jpg'
         ]
     },
     'patio-1': {
-        title: 'Industrial Concrete Installation',
+        title: 'Backyard Patio Installation',
         photos: [
-            'https://tinyurl.com/ymuk54sy',
-            'https://tinyurl.com/5786xx96',
-            'https://tinyurl.com/2hew4rtz',
-            'https://tinyurl.com/5a5ajcmz',
-            'https://tinyurl.com/yr2uptkt',
-            'https://tinyurl.com/mw4xtxej'
+            'Images/gallery/9/10-1.jpeg',
+            'Images/gallery/9/10-2.jpg',
+            'Images/gallery/9/10-3.jpg',
+            'Images/gallery/9/10-4.jpg',
+            'Images/gallery/9/10-5.jpg',
+            'Images/gallery/9/10-6.jpg',
+            'Images/gallery/9/10-7.jpg'
         ]
     },
     'repair-1': {
         title: 'Concrete Restoration Project',
         photos: [
-            'https://tinyurl.com/4bphn8yf',
-            'https://tinyurl.com/2s4kj8kt',
-            'https://tinyurl.com/yv55dmn7',
-            'https://tinyurl.com/mwtt36yf',
-            'https://tinyurl.com/29jfaprp'
+            'Images/gallery/5/7-1.png',
+            'Images/gallery/5/7-2.jpg',
+            'Images/gallery/5/7-3.png',
+            'Images/repairs/5-1.jpg'
         ]
     },
     'driveway-2': {
         title: 'Residential Driveway Construction',
         photos: [
-            'https://tinyurl.com/pn4d42jb',
-            'https://tinyurl.com/3zs46pmw',
-            'https://tinyurl.com/4jnmmy48'
+            'Images/gallery/4/6-1.jpg',
+            'Images/gallery/4/6-2.jpg',
+            'Images/gallery/4/6-3.jpg'
         ]
     },
     'foundation-2': {
         title: 'Residential Foundation Work',
         photos: [
-            'https://tinyurl.com/ycyxn7rf',
-            'https://tinyurl.com/yyu5zxxt',
-            'https://tinyurl.com/yy8yvhbm',
-            'https://tinyurl.com/ywpdk7cm',
-            'https://tinyurl.com/5ayj93kd',
-            'https://tinyurl.com/yz5uja6d',
-            'https://tinyurl.com/3s59e9ce',
-            'https://tinyurl.com/5x2nay25',
-            'https://tinyurl.com/65f79v74'
+            'Images/gallery/12/12-1.jpg',
+            'Images/gallery/12/12-2.jpg',
+            'Images/gallery/12/12-3.jpg',
+            'Images/gallery/12/12-4.jpg',
+            'Images/gallery/12/12-5.jpg',
+            'Images/gallery/12/12-6.jpg',
+            'Images/gallery/12/12-7.jpg',
+            'Images/gallery/12/12-8.jpg',
+            'Images/gallery/12/12-9.jpg'
         ]
     },
     'commercial-2': {
         title: 'Commercial Parking Lot',
         photos: [
-            'https://tinyurl.com/3u4nu6b4',
-            'https://tinyurl.com/mrxak9f6',
-            'https://tinyurl.com/mfy4826v',
-            'https://tinyurl.com/5adwyace'
-        ]
-    },
-    // Albums for "Our Work" section on homepage
-    'home-driveway-1': {
-        title: 'Residential Driveways',
-        photos: [
-            'https://tinyurl.com/3xjwr6zu',
-            'https://tinyurl.com/45j3sjmx',
-            'https://tinyurl.com/4fmhxf2p',
-            'https://tinyurl.com/2nmp62ur'
+            'Images/gallery/11/11-1.jpg',
+            'Images/gallery/11/11-3.jpg',
+            'Images/gallery/11/11-2.jpg',
+            'Images/gallery/11/11-4.jpg'
         ]
     },
     'home-foundation-1': {
         title: 'Housing Foundations',
         photos: [
-            'https://tinyurl.com/bdcu7887',
-            'https://tinyurl.com/esaa7hjt',
-            'https://tinyurl.com/bd4r4w7h',
-            'https://tinyurl.com/3z88exf8'
-        ]
+            'Images/gallery/13/13-2.png',
+            'Images/gallery/13/13-1.png',
+            'Images/gallery/13/13-3.png',
+            'Images/gallery/13/13-4.png'        ]
     },
-    'home-pooldeck-1': {
-        title: 'Pool Deck Constructions',
+    'home-patios-1': {
+        title: 'backyard Deck Construction',
         photos: [
-            'https://tinyurl.com/3s3z7m66',
-            'https://tinyurl.com/b7wdn4cd',
-            'https://tinyurl.com/ksbkv5uu',
-            'https://tinyurl.com/yz5c263y',
-            'https://tinyurl.com/87ncfksc',
-            'https://tinyurl.com/murasrsn'
+            'Images/gallery/15/15-1.png',
+            'Images/gallery/15/15-2.png',
+            'Images/gallery/15/15-3.png',
+            'Images/gallery/15/15-4.png',
+            'Images/gallery/15/15-5.png',
+            'Images/gallery/15/15-6.png'
         ]
     },
-    'sidewalk-2': {
-        title: 'Residential/Commercial Walkways',
-        photos: [
-            'https://tinyurl.com/5ffk4dub',
-            'https://tinyurl.com/4jpf8nth',
-            'https://tinyurl.com/4tvr55f2',
-            'https://tinyurl.com/485yvr2x',
-            'https://tinyurl.com/3bjrshnh',
-        ]
-    },
+   
     'home-patio-1': {
         title: 'Patio Constructions',
         photos: [
-            'https://tinyurl.com/yzu5cs8v',
-            'https://tinyurl.com/33t6adt5',
-            'https://tinyurl.com/3s82cpx4',
-            'https://tinyurl.com/3py2zyvu',
-            'https://tinyurl.com/5acrew9d'
+            'Images/gallery/14/14-1.jpg',
+            'Images/gallery/14/14-2.jpg',
+            'Images/gallery/14/14-3.jpg',
+            'Images/gallery/14/14-4.jpg',
+            'Images/gallery/14/14-5.jpg'
         ]
     },
     'home-repair-1': {
         title: 'Restorations',
         photos: [
-            'https://tinyurl.com/mr27eu8r',
-            'https://tinyurl.com/yc2m3bmm',
-            'https://tinyurl.com/48k9dsme',
-            'https://tinyurl.com/bdesus54',
-            'https://tinyurl.com/4n3a33wj',
-            'https://tinyurl.com/35kkhys5',
-            'https://tinyurl.com/3ck85pj6',
-            'https://tinyurl.com/mu2vr7vw',
-            'https://tinyurl.com/yyup3xh8',
-            'https://tinyurl.com/3uy4d954',
-            'https://tinyurl.com/4hzx97u7',
-            'https://tinyurl.com/hpttty74',
-            'https://tinyurl.com/56w38t8z',
-            'https://tinyurl.com/2fjx95d2',
-            'https://tinyurl.com/2a8ptvbs',
-            'https://tinyurl.com/yc8b43pp',
-            'https://tinyurl.com/4x738b6p'
+            'Images/gallery/3/5-1.jpg',
+            'Images/gallery/3/5-2.jpg',
+            'Images/gallery/3/5-3.jpg',
+            'Images/gallery/3/5-4.jpg',
+            'Images/gallery/3/5-5.jpg',
+            'Images/gallery/3/5-6.jpg',
+            'Images/gallery/3/5-7.jpg',
+            'Images/gallery/3/5-8.jpg',
+            'Images/gallery/3/5-9.jpg',
+            'Images/gallery/3/5-10.jpg',
+            'Images/gallery/3/5-11.jpg',
+            'Images/gallery/3/5-12.jpg',
+            'Images/gallery/3/5-13.jpg',
+            'Images/gallery/3/5-14.jpg',
+            'Images/gallery/3/5-15.jpg'
         ]
     },
     // New albums for additional gallery rows
@@ -224,141 +201,6 @@ const photoAlbums = {
             'https://tinyurl.com/33t6adt5'
         ]
     },
-    'repair-2': {
-        title: 'Concrete Repair & Restoration',
-        photos: [
-            'https://tinyurl.com/4bphn8yf',
-            'https://tinyurl.com/2s4kj8kt',
-            'https://tinyurl.com/yv55dmn7',
-            'https://tinyurl.com/mwtt36yf',
-            'https://tinyurl.com/yc2m3bmm'
-        ]
-    },
-    'foundation-4': {
-        title: 'Residential Foundation Work',
-        photos: [
-            'https://tinyurl.com/ycyxn7rf',
-            'https://tinyurl.com/yyu5zxxt',
-            'https://tinyurl.com/yy8yvhbm',
-            'https://tinyurl.com/ywpdk7cm',
-            'https://tinyurl.com/5ayj93kd'
-        ]
-    },
-    'commercial-3': {
-        title: 'Commercial Concrete Project',
-        photos: [
-            'https://tinyurl.com/3u4nu6b4',
-            'https://tinyurl.com/mrxak9f6',
-            'https://tinyurl.com/mfy4826v',
-            'https://tinyurl.com/5adwyace',
-            'https://tinyurl.com/56w38t8z'
-        ]
-    },
-    'driveway-4': {
-        title: 'Custom Driveway Design',
-        photos: [
-            'https://tinyurl.com/3xjwr6zu',
-            'https://tinyurl.com/45j3sjmx',
-            'https://tinyurl.com/4fmhxf2p',
-            'https://tinyurl.com/2nmp62ur',
-            'https://tinyurl.com/pn4d42jb'
-        ]
-    },
-    'foundation-5': {
-        title: 'Home Foundation Construction',
-        photos: [
-            'https://tinyurl.com/bdcu7887',
-            'https://tinyurl.com/esaa7hjt',
-            'https://tinyurl.com/bd4r4w7h',
-            'https://tinyurl.com/3z88exf8',
-            'https://tinyurl.com/yhsjd9z6'
-        ]
-    },
-    'pooldeck-3': {
-        title: 'Outdoor Pool Deck Project',
-        photos: [
-            'https://tinyurl.com/3s3z7m66',
-            'https://tinyurl.com/b7wdn4cd',
-            'https://tinyurl.com/ksbkv5uu',
-            'https://tinyurl.com/yz5c263y',
-            'https://tinyurl.com/87ncfksc',
-            'https://tinyurl.com/murasrsn'
-        ]
-    },
-    'sidewalk-4': {
-        title: 'Residential Walkway Project',
-        photos: [
-            'https://tinyurl.com/5ffk4dub',
-            'https://tinyurl.com/4jpf8nth',
-            'https://tinyurl.com/4tvr55f2',
-            'https://tinyurl.com/485yvr2x',
-            'https://tinyurl.com/3bjrshnh'
-        ]
-    },
-    'patio-3': {
-        title: 'Patio Resurfacing Project',
-        photos: [
-            'https://tinyurl.com/ywezfky3',
-            'https://tinyurl.com/yzu5cs8v',
-            'https://tinyurl.com/33t6adt5',
-            'https://tinyurl.com/3s82cpx4',
-            'https://tinyurl.com/3py2zyvu',
-            'https://tinyurl.com/5acrew9d'
-        ]
-    },
-    'repair-3': {
-        title: 'Concrete Restoration Work',
-        photos: [
-            'https://tinyurl.com/mr27eu8r',
-            'https://tinyurl.com/9w62fw7d',
-            'https://tinyurl.com/yc2m3bmm',
-            'https://tinyurl.com/48k9dsme',
-            'https://tinyurl.com/bdesus54',
-            'https://tinyurl.com/4n3a33wj'
-        ]
-    },
-    'driveway-5': {
-        title: 'Premium Driveway Installation',
-        photos: [
-            'https://tinyurl.com/4jnmmy48',
-            'https://tinyurl.com/2nmp62ur',
-            'https://tinyurl.com/5n7jsvh9',
-            'https://tinyurl.com/42dap9td',
-            'https://tinyurl.com/3zs46pmw'
-        ]
-    },
-    // Carpentry albums
-    'carpentry-1': {
-        title: 'Custom Carpentry Work',
-        photos: [
-            'https://tinyurl.com/2hew4rtz',
-            'https://tinyurl.com/5a5ajcmz',
-            'https://tinyurl.com/yr2uptkt',
-            'https://tinyurl.com/mw4xtxej',
-            'https://tinyurl.com/ymuk54sy'
-        ]
-    },
-    'carpentry-2': {
-        title: 'Residential Carpentry Project',
-        photos: [
-            'https://tinyurl.com/ywezfky3',
-            'https://tinyurl.com/yzu5cs8v',
-            'https://tinyurl.com/33t6adt5',
-            'https://tinyurl.com/3s82cpx4',
-            'https://tinyurl.com/3py2zyvu'
-        ]
-    },
-    'carpentry-3': {
-        title: 'Professional Carpentry Services',
-        photos: [
-            'https://tinyurl.com/5786xx96',
-            'https://tinyurl.com/2hew4rtz',
-            'https://tinyurl.com/5a5ajcmz',
-            'https://tinyurl.com/yr2uptkt',
-            'https://tinyurl.com/mw4xtxej',
-            'https://tinyurl.com/ymuk54sy'
-        ]
-    }
 };
 
 const AlbumModal = {
