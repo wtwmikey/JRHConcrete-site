@@ -154,10 +154,11 @@ const photoAlbums = {
     'driveway-3': {
         title: 'Modern Driveway Installation',
         photos: [
-            'https://tinyurl.com/5n7jsvh9',
-            'https://tinyurl.com/42dap9td',
-            'https://tinyurl.com/3xjwr6zu',
-            'https://tinyurl.com/45j3sjmx'
+            'Images/gallery/7/8-1.jpg',
+            'Images/gallery/7/8-2.jpg',
+            'Images/gallery/7/8-3.jpg',
+            'Images/gallery/7/8-4.jpg',
+            'Images/gallery/7/8-5.jpg'
         ]
     },
     'foundation-3': {
@@ -170,25 +171,18 @@ const photoAlbums = {
             'https://tinyurl.com/bd4r4w7h'
         ]
     },
-    'pooldeck-2': {
-        title: 'Luxury Pool Deck Design',
+    'deck-1': {
+        title: 'Deck Construction',
         photos: [
-            'https://tinyurl.com/3sscpzmd',
-            'https://tinyurl.com/3jyb5dah',
-            'https://tinyurl.com/4t74pswp',
-            'https://tinyurl.com/3s3z7m66',
-            'https://tinyurl.com/b7wdn4cd',
-            'https://tinyurl.com/ksbkv5uu'
+            'Images/gallery/16/16-2.jpg',
+            'Images/gallery/16/16-3.jpg',
+            'Images/gallery/16/16-4.jpg'
         ]
     },
     'sidewalk-3': {
         title: 'Commercial Sidewalk Installation',
         photos: [
-            'https://tinyurl.com/92cpb46p',
-            'https://tinyurl.com/yvnnukfx',
-            'https://tinyurl.com/5ffk4dub',
-            'https://tinyurl.com/4jpf8nth',
-            'https://tinyurl.com/4tvr55f2'
+
         ]
     },
     'patio-2': {
