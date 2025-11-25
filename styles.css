@@ -422,7 +422,7 @@ video {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), var(--hero-background-image);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1157,7 +1157,7 @@ video {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('Images/sidewalk.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -4428,6 +4428,14 @@ body a:not(.btn):not(.nav-link):not(.nav-link-cta):not(.social-links a):not(.gal
 }
 
 @media (min-width: 1200px) {
+    .hero {
+        background-attachment: fixed;
+    }
+
+    .about {
+        background-attachment: fixed;
+    }
+
     .gallery-header {
         background-attachment: fixed;
     }
