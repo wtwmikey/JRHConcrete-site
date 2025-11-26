@@ -402,7 +402,7 @@ const Forms = {
     },
 
     sendToBusinessOwner(formData) {
-        const businessEmail = '218mikey@gmail.com';
+        const businessEmail = 'jrhccllc@gmail.com';
         const emailSubject = 'New Quick Quote Request';
         const emailBody = `
 New Quick Quote Request Received:
@@ -421,7 +421,7 @@ Timestamp: ${new Date().toLocaleString()}
     },
 
     sendQuoteForm(formData) {
-        const businessEmail = '218mikey@gmail.com';
+        const businessEmail = 'jrhccllc@gmail.com';
         const emailSubject = 'New Quote Request - JRH Concrete & Construction';
         const emailBody = `
 New Quote Request Received:
